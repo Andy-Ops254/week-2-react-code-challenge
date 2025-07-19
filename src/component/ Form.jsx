@@ -9,13 +9,13 @@ function  Form () {
     const[deadline, setDeadline]=useState("")
     const[createdAt, setCreatedAt]= useState("")
 
-    console.log;{"weeeeeeee"}
+    console.log; ("weeeeeeee")
     
 
 
     function handleSubmit(e){
     e.preventDefault()
-console.log("finaya apo")
+console.log("finya apo")
     console.log("name", name)
     const newData= {
     name:name,
@@ -29,20 +29,20 @@ console.log(newData);
 }
     return (
     <div>
-    <form>
+    <form onSubmit={handleSubmit}> 
         <label>
         Name :
-        <input type="text" name="Name" placeholder="Name" onChange={(e)=> setName(e.target.value)}/>
+        <input type="text" value={name} placeholder="Name" onChange={(e)=> setName(e.target.value)}/>
         </label>
         
         <label>
         Target Amount :
-        <input type="number"  name="target" placeholder="Target Amount" o/>
+        <input type="number"  value={target} placeholder="Target Amount" onChange={(e) => setTarget(e.target.value)}/>
         </label>
 
         <label>
         Category
-        <select name="category">
+        <select name="category" onChange={(e)=> setCategory(e.target.value)}>
         <option value="Electronics">Electronics</option>
         <option value= "travel">Travel</option>
         <option value="Retirement">Retirement</option>
@@ -57,16 +57,16 @@ console.log(newData);
 
         <label>
         Saved Amount : 
-        <input type= "number" name ="saved" placeholder="saved Amount"></input>
+        <input type= "number" value={saved} placeholder="saved Amount" onChange={(e)=> setSaved(e.target.value)}></input>
         </label>
 
         <label>Created At :
-        <input type="date" name="date" placeholder="Created At" />
+        <input type="date" value={createdAt} placeholder="Created At" onChange={(e) =>setCreatedAt(e.target.value)} />
         </label>
 
         <label>
         Deadline :
-        <input type="date"  name="date"  placeholder="deadline"/>
+        <input type="date"  value={deadline}  placeholder="deadline" onChange={(e) => setDeadline(e.target.value)}/>
         </label>
 
         <button>

@@ -8,7 +8,11 @@ function App() {
     <div> 
       <h1>SMART GOAL PLANNER</h1>
       <h2>Be Financially Disciplined</h2>
+      <Form  />
       </div>
+
+      
+
       
     
       

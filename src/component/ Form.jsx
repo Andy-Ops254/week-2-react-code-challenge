@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
 
-function  Form () {
+function  Form ({onAddItem}) {
     const[name, setName]=useState("")
     const[target, setTarget]= useState(0)
     const[saved, setSaved]=useState(0)
@@ -9,7 +9,7 @@ function  Form () {
     const[deadline, setDeadline]=useState("")
     const[createdAt, setCreatedAt]= useState("")
 
-    console.log; ("weeeeeeee")
+    // console.log; ("weeeeeeee")
     
 
 
@@ -17,6 +17,12 @@ function  Form () {
     e.preventDefault()
 console.log("finya apo")
     console.log("name", name)
+    console.log("target", target)
+    console.log("saved", saved)
+    console.log("category", category)
+    console.log("deadline", deadline)
+    console.log("createdAt", createdAt)
+
     const newData= {
     name:name,
     targetAmount: target,
@@ -25,18 +31,18 @@ console.log("finya apo")
     deadline:deadline,
     createdAt:createdAt,
 }
-console.log(newData);
+
     //Fetch request
     fetch("http://localhost:3000/goals", {
         method: "POST",
         headers :{
-            "Content-Type": "application.json",
-            "Accept": "application.json"
+            "Content-Type": "application/json",
+            "Accept": "application/json"
         },
         body: JSON.stringify(newData)// converts to object strings
     })
     .then(res => res.json())
-    .then(Data => console.log (Data))
+    .then(Data => console.log(Data))
     
 }
     return (

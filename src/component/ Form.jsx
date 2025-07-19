@@ -26,6 +26,18 @@ console.log("finya apo")
     createdAt:createdAt,
 }
 console.log(newData);
+    //Fetch request
+    fetch("http://localhost:3000/goals", {
+        method: "POST",
+        headers :{
+            "Content-Type": "application.json",
+            "Accept": "application.json"
+        },
+        body: JSON.stringify(newData)// converts to object strings
+    })
+    .then(res => res.json())
+    .then(Data => console.log (Data))
+    
 }
     return (
     <div>

@@ -8,12 +8,19 @@ function App() {
       <h2>Be Financially Disciplined</h2>
       <div>
       <form className="Savings">
-        <label for="name"></label>
-
+      
+      <label>
+        Name :
         <input type="text" name="Name" placeholder="Name"/>
-
+      </label>
+        
+        <label>
+        Target Amount :
         <input type="number"  name="target" placeholder="Target Amount"/>
+        </label>
 
+        <label>
+          Category
         <select name="category">
           <option>Electronics</option>
           <option>Travel</option>
@@ -25,14 +32,22 @@ function App() {
           <option>vehicle</option>
           <option>Real Estate</option>
         </select>
+        </label>
 
-        <input type= "number" name ="saved" placeholder="saved Amount" />
+        <label>
+          Saved Amount : 
+        <input type= "number" name ="saved" placeholder="saved Amount"></input>
+        </label>
+
+        <label>Created At :
         <input type="date" name="date" placeholder="Created At" />
+        </label>
+
+        <label>
+          Deadline :
         <input type="date"  name="date"  placeholder="deadline"/>
-
-
-        
-
+        </label>
+        <button>Submit</button>
       </form>
 
         

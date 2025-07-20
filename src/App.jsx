@@ -1,16 +1,9 @@
-import React, {useState, useEffect} from "react"
+import React from "react"
 import Form from "./component/ Form"
+import GoalLists from "./component/GoalLists"
 
 function App() {
-  const[newItem, setNewItem]= useState([])
-
-  //Get request
-  useEffect(()=> {
-    fetch("http://localhost:3000/goals")
-    .then (resp =>resp.json())
-    .then(Data => setNewItem(Data)) //remember to update state
-  })
-
+  
   // function handleNewItem (newItem){
   //   setNewItem( newItem)
 
@@ -21,6 +14,7 @@ function App() {
       <h1>SMART GOAL PLANNER</h1>
       <h2>Be Financially Disciplined</h2>
       <Form  />
+      <GoalLists />
       </div>
 
       

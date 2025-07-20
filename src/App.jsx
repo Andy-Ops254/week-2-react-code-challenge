@@ -32,8 +32,8 @@ function App() {
 
   return (
     <div> 
-      <h1>SMART GOAL PLANNER</h1>
-      <h2>Be Financially Disciplined</h2>
+      <h1 className="font-bold text-center font-serif text-4xl my-4">SMART GOAL PLANNER</h1>
+      <h2 className="font-semibold text-center text-3xl overline">Be Financially Disciplined</h2>
       <Form  onAddGoal={handleNewGoal} />
       <GoalLists  goals={goals} onDelete={handleDelete}/>
       </div>

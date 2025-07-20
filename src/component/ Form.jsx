@@ -62,11 +62,11 @@ console.log("finya apo")
 
 
     return (
-    <div className='h-vh  flex items-center justify-center p-4 '>
+    <div className='min-h-screen flex items-center justify-center align-center  '>
 
-    <form onSubmit={handleSubmit}className='w-full max-w-lg bg-[#1DCD9F] rounded-lg shadow-lg shadow-green-400  p-8'>
+    <form onSubmit={handleSubmit}className=' w-full max-w-lg bg-[#1DCD9F] rounded-lg shadow-lg shadow-green-400  p-8'>
 
-    <h2 className='font-bold text-black text-center font-serif text-2xl mb-8'>SAVE TOWARDS YOUR FUTURE!!</h2>
+    <h2 className='font-bold text-center font-serif text-2xl mb-8'>SAVE TOWARDS YOUR FUTURE!!</h2>
 
         <div className='space-y-6'>
         
@@ -74,7 +74,7 @@ console.log("finya apo")
         <label className='block text-md font-medium mb-2 text-black'>
         Name  :
         <input type="text" value={name} placeholder="Name" onChange={(e)=> setName(e.target.value)}
-        className='w-full px-3 py-2 border border-none rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent'
+        className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent'
         />
         </label>
         </div>
@@ -83,7 +83,7 @@ console.log("finya apo")
         <label className='block text-md font-medium mb-2 text-black'>
         Target Amount  : 
         <input type="number"  value={target} placeholder="Target Amount" onChange={(e) => setTarget(e.target.value)}
-        className='w-full px-3 py-2 border border-none rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent'
+        className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent'
         />
         </label>
         </div>
@@ -93,7 +93,7 @@ console.log("finya apo")
         Category  :
         </label>
         <select name="category" onChange={(e)=> setCategory(e.target.value)}
-        className='w-full px-3 py-2 border border-none rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-black'
+        className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-black'
         >
         <option value="ALl" className='text-black' >All</option>
         <option value="Electronics" className='text-black'>Electronics</option>
@@ -113,7 +113,7 @@ console.log("finya apo")
         Saved Amount  :
         </label>
         <input type= "number" value={saved} placeholder="saved Amount" onChange={(e)=> setSaved(e.target.value)}
-        className='w-full px-3 py-2 border border-none rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border- text-black'
+        className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border- text-black'
         ></input>
         </div>
 
@@ -122,7 +122,7 @@ console.log("finya apo")
             Created At  :
         </label>
         <input type="date" value={createdAt} placeholder="Created At" onChange={(e) =>setCreatedAt(e.target.value)} 
-        className='w-full px-3 py-2 border border-none rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-black'
+        className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-black'
         />
         </div>
 
@@ -131,13 +131,12 @@ console.log("finya apo")
         Deadline  :
         </label>
         <input type="date"  value={deadline}  placeholder="deadline" onChange={(e) => setDeadline(e.target.value)}
-        className='w-full px-3 py-2 border border-none rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-black'
+        className='w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-black'
         />
         </div>
 
         <button
         className="w-full"
-
         >
     Submit
     </button>

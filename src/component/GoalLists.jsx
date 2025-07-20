@@ -18,26 +18,28 @@ function GoalLists  ({goals, onDelete})  {
 //everything sent to APP and then this displays the changes
 
 return (
-    <div>
-        <h2>SAVINGS GOAL LIST</h2>
+    <div className='max-w-7xl mx-auto px-8 py-8'>
+        <h2 className='font-extrabold font-serif text-3xl my-8 text-center'>SAVINGS GOAL LIST</h2>
         {goals.length===0 ? 
-        <p>WEKA KITU MSEE !</p> :
-        <ol>
+        <p className='text-center font-extrabold font-serif font text-red-700 text-3xl'>WEKA KITU MSEE !</p> :
+        <div className= 'grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6'>
             {goals.map((goal) => (
-                <li key={goal.id}
-                className=''
+                <div key={goal.id}
+                className='bg-[#1DCD9F] rounded-lg hover:shadow-lg shadow-green-400 transition-shadow duration-150 cursor-grabbing p-8 flex flex-col'
                 >
-                    <h3> {goal.name}</h3>
-                    <p>Target :{goal.targetAmount}</p>
-                    <p>saved :{goal.savedAmount}</p>
-                    <p>category :{goal.category}</p>
-                    <p>deadline :{goal.deadline}</p>
-                    <p>createdAt :{goal.createdAt}</p>
-                    <button onClick={() =>onDelete(goal.id)}>Delete</button>
+                    <h3 className='mb-4 text-center font-bold font-serif text-xl'> {goal.name}</h3>
+                    <div className='space-y-3 font-semibold'>
+                    <p>Target:<span className='ml-4'>{goal.targetAmount}</span></p>
+                    <p>saved:<span className='ml-4'>{goal.savedAmount}</span></p>
+                    <p>category:<span className='ml-4'>{goal.category}</span></p>
+                    <p>deadline:<span className='ml-4'>{goal.deadline}</span></p>
+                    <p>createdAt:<span className='ml-4'>{goal.createdAt}</span></p>
+                    </div>
+                    <button onClick={() =>onDelete(goal.id)} className='my-2'>Delete</button>
                     <button> Edit </button>
-                </li>
+                </div>
             ))}
-        </ol>}
+        </div>}
     </div>
 )
 }

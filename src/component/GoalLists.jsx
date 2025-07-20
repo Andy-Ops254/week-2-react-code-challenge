@@ -1,27 +1,19 @@
-import React , {useState, useEffect} from 'react'
+// import React , {useState, useEffect} from 'react'
 
 
 
-function GoalLists  ()  {
+function GoalLists  ({goals, onDelete})  {
     // return (<div>This is working</div>)
-    const[goals, setGoals]= useState([])
+    // const[goals, setGoals]= useState([])
 
   //Get request
-    useEffect(()=> {
-    fetch("http://localhost:3000/goals")
-    .then (resp =>resp.json())
-    .then(Data => setGoals(Data)) //remember to update state
-    },[])
+    // useEffect(()=> {
+    // fetch("http://localhost:3000/goals")
+    // .then (resp =>resp.json())
+    // .then(Data => setGoals(Data)) //remember to update state
+    // },[])
 
-    function handleDelete (goalId) {
-        // console.log ("makosa")
-        fetch(`http://localhost:3000/goals/${goalId}`,{
-        method: "DELETE"
-        })
-        .then(resp => resp.json())
-        .then(() => console.log("dlete!")) 
-            setGoals(goals.filter(goal => goal.id !==goalId))
-    }
+//everything sent to APP and then this displays the changes
 
 return (
     <div>
@@ -37,7 +29,7 @@ return (
                     <p>category :{goal.category}</p>
                     <p>deadline :{goal.deadline}</p>
                     <p>createdAt :{goal.createdAt}</p>
-                    <button onClick={() =>handleDelete(goal.id)}>Delete</button>
+                    <button onClick={() =>onDelete(goal.id)}>Delete</button>
                 </li>
             ))}
         </ol>}

@@ -98,6 +98,15 @@
       "deadline": "2025-07-09",
       "createdAt": "2025-06-08",
       "id": 13
+    },
+    {
+      "name": "Mum's vacation",
+      "targetAmount": "40000",
+      "savedAmount": "20000",
+      "category": "travel",
+      "deadline": "2025-08-31",
+      "createdAt": "2025-04-28",
+      "id": 14
     }
   ]
 }

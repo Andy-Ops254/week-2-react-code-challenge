@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 
 
-function  Form ({onAddGoal, goals}) {
+function  Form ({onAddGoal}) {
     const[name, setName]=useState("")
     const[target, setTarget]= useState(0)
     const[saved, setSaved]=useState(0)

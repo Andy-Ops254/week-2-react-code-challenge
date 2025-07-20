@@ -118,12 +118,12 @@
       "id": 15
     },
     {
-      "name": "HDD 1TB",
-      "targetAmount": "1500",
-      "savedAmount": "700",
+      "name": "JBL-6500",
+      "targetAmount": "14000",
+      "savedAmount": "1999",
       "category": "Electronics",
-      "deadline": "2025-09-20",
-      "createdAt": "2025-08-20",
+      "deadline": "2026-01-09",
+      "createdAt": "2025-08-14",
       "id": 16
     }
   ]

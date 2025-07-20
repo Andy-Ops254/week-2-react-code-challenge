@@ -13,8 +13,14 @@ function GoalLists  ()  {
     .then(Data => setGoals(Data)) //remember to update state
     },[])
 
-    function handleDelete () {
-        console.log ("makosa")
+    function handleDelete (goalId) {
+        // console.log ("makosa")
+        fetch(`http://localhost:3000/goals/${goalId}`,{
+        method: "DELETE"
+        })
+        .then(resp => resp.json())
+        .then(() => console.log("dlete!")) 
+
     }
 
 return (
@@ -31,7 +37,7 @@ return (
                     <p>category :{goal.category}</p>
                     <p>deadline :{goal.deadline}</p>
                     <p>createdAt :{goal.createdAt}</p>
-                    <button onClick={handleDelete}>Delete</button>
+                    <button onClick={() =>handleDelete(goal.id)}>Delete</button>
                 </li>
             ))}
         </ol>}

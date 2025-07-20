@@ -20,7 +20,7 @@ function GoalLists  ()  {
         })
         .then(resp => resp.json())
         .then(() => console.log("dlete!")) 
-
+            setGoals(goals.filter(goal => goal.id !==goalId))
     }
 
 return (

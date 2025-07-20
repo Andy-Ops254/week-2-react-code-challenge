@@ -62,52 +62,87 @@ console.log("finya apo")
 
 
     return (
-    <div>
-    <form onSubmit={handleSubmit}> 
-        <label>
-        Name :
-        <input type="text" value={name} placeholder="Name" onChange={(e)=> setName(e.target.value)}/>
-        </label>
+    <div className='h-vh  flex items-center justify-center p-4 '>
+
+    <form onSubmit={handleSubmit}className='w-full max-w-lg bg-[#1DCD9F] rounded-lg shadow-lg shadow-green-400  p-8'>
+
+    <h2 className='font-bold text-black text-center font-serif text-2xl mb-8'>SAVE TOWARDS YOUR FUTURE!!</h2>
+
+        <div className='space-y-6'>
         
-        <label>
-        Target Amount :
-        <input type="number"  value={target} placeholder="Target Amount" onChange={(e) => setTarget(e.target.value)}/>
+        <div>
+        <label className='block text-md font-medium mb-2 text-black'>
+        Name  :
+        <input type="text" value={name} placeholder="Name" onChange={(e)=> setName(e.target.value)}
+        className='w-full px-3 py-2 border border-none rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent'
+        />
         </label>
+        </div>
+        
+        <div>
+        <label className='block text-md font-medium mb-2 text-black'>
+        Target Amount  : 
+        <input type="number"  value={target} placeholder="Target Amount" onChange={(e) => setTarget(e.target.value)}
+        className='w-full px-3 py-2 border border-none rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent'
+        />
+        </label>
+        </div>
 
-        <label>
-        Category
-        <select name="category" onChange={(e)=> setCategory(e.target.value)}>
-        <option value="ALl">All</option>
-        <option value="Electronics">Electronics</option>
-        <option value= "travel">Travel</option>
-        <option value="Retirement">Retirement</option>
-        <option value="Education">Education</option>
-        <option value="Emergency">Emergency</option>
-        <option value="Home">Home</option>
-        <option value="Shopping">Shopping</option>
-        <option value="vehicle">vehicle</option>
-        <option value="Real Estate">Real Estate</option>
+        <div>
+        <label className='block text-md font-medium mb-2 text-black'> 
+        Category  :
+        </label>
+        <select name="category" onChange={(e)=> setCategory(e.target.value)}
+        className='w-full px-3 py-2 border border-none rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-black'
+        >
+        <option value="ALl" className='text-black' >All</option>
+        <option value="Electronics" className='text-black'>Electronics</option>
+        <option value= "travel" className='text-black'>Travel</option>
+        <option value="Retirement" className='text-black'>Retirement</option>
+        <option value="Education" className='text-black'>Education</option>
+        <option value="Emergency" className='text-black'>Emergency</option>
+        <option value="Home" className='text-black'>Home</option>
+        <option value="Shopping" className='text-black'>Shopping</option>
+        <option value="vehicle" className='text-black'>vehicle</option>
+        <option value="Real Estate" className='text-black'>Real Estate</option>
         </select>
-        </label>
+        </div>
 
-        <label>
-        Saved Amount : 
-        <input type= "number" value={saved} placeholder="saved Amount" onChange={(e)=> setSaved(e.target.value)}></input>
+        <div>
+        <label className='block text-md font-medium mb-2 text-black'>
+        Saved Amount  :
         </label>
+        <input type= "number" value={saved} placeholder="saved Amount" onChange={(e)=> setSaved(e.target.value)}
+        className='w-full px-3 py-2 border border-none rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border- text-black'
+        ></input>
+        </div>
 
-        <label>Created At :
-        <input type="date" value={createdAt} placeholder="Created At" onChange={(e) =>setCreatedAt(e.target.value)} />
+        <div>
+        <label className='block text-md font-medium mb-2 text-black'>
+            Created At  :
         </label>
+        <input type="date" value={createdAt} placeholder="Created At" onChange={(e) =>setCreatedAt(e.target.value)} 
+        className='w-full px-3 py-2 border border-none rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-black'
+        />
+        </div>
 
-        <label>
-        Deadline :
-        <input type="date"  value={deadline}  placeholder="deadline" onChange={(e) => setDeadline(e.target.value)}/>
+        <div>
+        <label className='block text-md font-medium mb-2 text-black'>
+        Deadline  :
         </label>
+        <input type="date"  value={deadline}  placeholder="deadline" onChange={(e) => setDeadline(e.target.value)}
+        className='w-full px-3 py-2 border border-none rounded-md focus:outline-none focus:ring-2 focus:ring-sky-500 focus:border-transparent text-black'
+        />
+        </div>
 
-        <button>
+        <button
+        className="w-full"
+
+        >
     Submit
     </button>
-        
+            </div>
+
     </form>
     </div>
 

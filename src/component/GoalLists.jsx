@@ -24,7 +24,9 @@ return (
         <p>WEKA KITU MSEE !</p> :
         <ol>
             {goals.map((goal) => (
-                <li key={goal.id}>
+                <li key={goal.id}
+                className=''
+                >
                     <h3> {goal.name}</h3>
                     <p>Target :{goal.targetAmount}</p>
                     <p>saved :{goal.savedAmount}</p>

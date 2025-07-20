@@ -8,7 +8,7 @@ function App() {
   useEffect(()=> {
     fetch("http://localhost:3000/goals")
     .then (resp =>resp.json())
-    .then(Data => console.log(Data)) //remember to update state
+    .then(Data => setNewItem(Data)) //remember to update state
   })
 
   // function handleNewItem (newItem){

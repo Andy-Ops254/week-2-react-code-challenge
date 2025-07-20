@@ -1,51 +1,21 @@
 import React, {useState} from 'react'
-// import App from './App'
+import App from './component/App'
 
 
-function  Form ({onAddItem}) {
+function  Form ({onAddGoal, goals}) {
     const[name, setName]=useState("")
     const[target, setTarget]= useState(0)
     const[saved, setSaved]=useState(0)
     const[category, setCategory]= useState("Electronics")
     const[deadline, setDeadline]=useState("")
-    const[createdAt, setCreatedAt]= useState("")
+    // const[newItem, setNewItem]=useState ()
+    const[createdAt, setCreatedAt]= useState()
+
 
     // console.log; ("weeeeeeee")
     
 
 
-    function handleSubmit(e){
-    e.preventDefault()
-console.log("finya apo")
-    console.log("name", name)
-    console.log("target", target)
-    console.log("saved", saved)
-    console.log("category", category)
-    console.log("deadline", deadline)
-    console.log("createdAt", createdAt)
-
-    const newData= {
-    name:name,
-    targetAmount: target,
-    savedAmount:saved,
-    category:category,
-    deadline:deadline,
-    createdAt:createdAt,
-}
-
-    //Fetch request
-    fetch("http://localhost:3000/goals", {
-        method: "POST",
-        headers :{
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-        },
-        body: JSON.stringify(newData)// converts to object strings
-    })
-    .then(res => res.json())
-    .then(Data => console.log(Data)) //remember to update state after display
-    
-}
     return (
     <div>
     <form onSubmit={handleSubmit}> 

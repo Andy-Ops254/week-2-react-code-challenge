@@ -13,6 +13,10 @@ function GoalLists  ()  {
     .then(Data => setGoals(Data)) //remember to update state
     },[])
 
+    function handleDelete () {
+        console.log ("makosa")
+    }
+
 return (
     <div>
         <h1>SAVINGS GOAL LIST</h1>
@@ -22,12 +26,12 @@ return (
             {goals.map((goal) => (
                 <li key={goal.id}>
                     <h3> {goal.name}</h3>
-                <p>Target :{goal.targetAmount}</p>
-                <p>saved :{goal.savedAmount}</p>
-                <p>category :{goal.category}</p>
-                <p>deadline :{goal.deadline}</p>
-                <p>createdAt :{goal.createdAt}</p>
-                <button>Delete</button>
+                    <p>Target :{goal.targetAmount}</p>
+                    <p>saved :{goal.savedAmount}</p>
+                    <p>category :{goal.category}</p>
+                    <p>deadline :{goal.deadline}</p>
+                    <p>createdAt :{goal.createdAt}</p>
+                    <button onClick={handleDelete}>Delete</button>
                 </li>
             ))}
         </ol>}

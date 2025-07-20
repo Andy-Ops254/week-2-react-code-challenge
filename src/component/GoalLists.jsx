@@ -1,10 +1,12 @@
-// import React , {useState, useEffect} from 'react'
+import React , {useState, useEffect} from 'react'
 
 
 
 function GoalLists  ({goals, onDelete})  {
     // return (<div>This is working</div>)
     // const[goals, setGoals]= useState([])
+    const[editId, setEditId]=useState(null) //thesse state help in tracking the goal being tracked and saved
+    const[saveEdit, SetSaveEdit]=useState("")
 
   //Get request
     // useEffect(()=> {
@@ -17,7 +19,7 @@ function GoalLists  ({goals, onDelete})  {
 
 return (
     <div>
-        <h1>SAVINGS GOAL LIST</h1>
+        <h2>SAVINGS GOAL LIST</h2>
         {goals.length===0 ? 
         <p>WEKA KITU MSEE !</p> :
         <ol>

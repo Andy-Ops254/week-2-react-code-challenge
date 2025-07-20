@@ -25,7 +25,7 @@ function App() {
         })
         .then(resp => resp.json())
         .then(() => {
-        console.log("dlete!")            
+        // console.log("delete!")            
         setGoals(goals.filter(goal => goal.id !==goalId))
     })
     }

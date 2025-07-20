@@ -43,7 +43,7 @@ console.log("finya apo")
     })
     .then(res => res.json())
     .then(Data =>{
-                onAddGoal(Data)
+                onAddGoal(Data),
                 clearForm()
     } 
     ) //remember to update state after display

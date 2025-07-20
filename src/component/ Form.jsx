@@ -42,7 +42,21 @@ console.log("finya apo")
         body: JSON.stringify(newData)// converts to object strings
     })
     .then(res => res.json())
-    .then(Data => onAddGoal(Data)) //remember to update state after display
+    .then(Data =>{
+                onAddGoal(Data)
+                clearForm()
+    } 
+    ) //remember to update state after display
+
+    //clear form logic
+    function clearForm() {
+        setName("")
+        setCategory("Electronics")
+        setCreatedAt("")
+        setDeadline("")
+        setTarget("")
+        setSaved("")
+    }
     
 }
 
@@ -63,6 +77,7 @@ console.log("finya apo")
         <label>
         Category
         <select name="category" onChange={(e)=> setCategory(e.target.value)}>
+        <option value="ALl">All</option>
         <option value="Electronics">Electronics</option>
         <option value= "travel">Travel</option>
         <option value="Retirement">Retirement</option>

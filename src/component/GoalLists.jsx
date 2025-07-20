@@ -30,6 +30,7 @@ return (
                     <p>deadline :{goal.deadline}</p>
                     <p>createdAt :{goal.createdAt}</p>
                     <button onClick={() =>onDelete(goal.id)}>Delete</button>
+                    <button> Edit </button>
                 </li>
             ))}
         </ol>}

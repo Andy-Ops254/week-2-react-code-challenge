@@ -3,7 +3,9 @@ import Form from "./component/ Form"
 import GoalLists from "./component/GoalLists"
 
 function App() {
-  const[newGoal, setGoals]=useState([])
+  const[goals, setGoals]=useState([])
+
+  
 
 
   function handleNewGoal (newGoal){
@@ -11,39 +13,7 @@ function App() {
   }
 
 
-    function handleSubmit(e){
-    e.preventDefault()
-console.log("finya apo")
-    console.log("name", name)
-    console.log("target", target)
-    console.log("saved", saved)
-    console.log("category", category)
-    console.log("deadline", deadline)
-    console.log("createdAt", createdAt)
-
-    const newData= {
-    name:name,
-    targetAmount: target,
-    savedAmount:saved,
-    category:category,
-    deadline:deadline,
-    createdAt:createdAt,
-}
-
-    //Fetch request
-    fetch("http://localhost:3000/goals", {
-        method: "POST",
-        headers :{
-            "Content-Type": "application/json",
-            "Accept": "application/json"
-        },
-        body: JSON.stringify(newData)// converts to object strings
-    })
-    .then(res => res.json())
-    .then(Data => onAddGoal(Data)) //remember to update state after display
-    
-}
-
+ 
   return (
     <div> 
       <h1>SMART GOAL PLANNER</h1>

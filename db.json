@@ -91,12 +91,12 @@
       "id": 12
     },
     {
-      "name": "",
-      "targetAmount": "2222220",
-      "savedAmount": "3000",
-      "category": "travel",
-      "deadline": "2028-01-05",
-      "createdAt": "2025-01-01",
+      "name": "BIG HOOP",
+      "targetAmount": "1200",
+      "savedAmount": "300",
+      "category": "Shopping",
+      "deadline": "2025-07-09",
+      "createdAt": "2025-06-08",
       "id": 13
     }
   ]

@@ -1,4 +1,5 @@
 import React, {useState} from 'react'
+// import App from './App'
 
 
 function  Form ({onAddItem}) {
@@ -42,7 +43,7 @@ console.log("finya apo")
         body: JSON.stringify(newData)// converts to object strings
     })
     .then(res => res.json())
-    .then(Data => console.log(Data))
+    .then(Data => console.log(Data)) //remember to update state after display
     
 }
     return (

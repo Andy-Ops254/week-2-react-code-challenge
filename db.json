@@ -134,6 +134,15 @@
       "deadline": "2025-11-18",
       "createdAt": "2023-03-03",
       "id": 11
+    },
+    {
+      "name": "",
+      "targetAmount": 0,
+      "savedAmount": 0,
+      "category": "Electronics",
+      "deadline": "",
+      "createdAt": "",
+      "id": 12
     }
   ]
 }
